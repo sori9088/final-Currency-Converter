@@ -4,7 +4,7 @@ body {
 h1 {
     font-size: 3em;
     color: #d9534f;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Fredoka One', cursive;
     text-shadow: 0 0 5px #d9534f;
 }
 
@@ -18,7 +18,7 @@ h1 {
     background-color: beige;
     margin: 50px;
     border-radius: 40px;
-    border:5px solid #d9534f;
+    border:6px solid #d9534f;
 }
 
 .input {
