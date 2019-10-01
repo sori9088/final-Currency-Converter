@@ -1,0 +1,19 @@
+h1 {
+    font-size: 3em;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 0 7px #d9534f;
+}
+
+.currencyoptiion{
+ display: flex;
+
+}
+
+.container {
+    width: 800px;
+    background-color: beige;
+    margin: 50px;
+    border-radius: 40px;
+    border:5px solid #d9534f;
+}
