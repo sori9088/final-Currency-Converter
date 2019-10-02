@@ -52,18 +52,12 @@ function formatCurrency(type, value) {
   let toCurrency;
   let money;
 
-function convert(){
-    money = amount.value;
-    fromCurrency= fromSelector[fromSelector.selectedIndex].value;
-    toCurrency= toSelector[toSelector.selectedIndex].value;
-    callApi(fromCurrency,toCurrency);
-    result = exchangeRates[fromCurrency.toLowerCase()][toCurrency.toLowerCase()]*money;
-    resultArea.innerHTML = formatCurrency(toCurrency,result);
 
-}
-
-async function callApi(fromCurrency,toCurrency) {
-    let currency= fromCurrency+"_"+toCurrency;
+async function convert() {
+  money = amount.value;
+  fromCurrency= fromSelector[fromSelector.selectedIndex].value;
+  toCurrency= toSelector[toSelector.selectedIndex].value;
+  let currency= fromCurrency+"_"+toCurrency;
     console.log(currency);
     let url = ('https://free.currencyconverterapi.com/api/v6/convert?q=' + currency + '&compact=ultra&apiKey=02090325190c07d6148f');
     let resultapi = await fetch(url);
@@ -73,6 +67,7 @@ async function callApi(fromCurrency,toCurrency) {
     let exchangedAmount = rate*money;
     console.log ("converted amount is ",exchangedAmount);
     updateResults(json);
+    resultArea.innerHTML = formatCurrency(toCurrency,exchangedAmount);
 }
 
 function updateResults(response) {
